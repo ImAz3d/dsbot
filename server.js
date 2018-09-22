@@ -15,20 +15,20 @@ if(message.content.startsWith(prefix+"dimealgo"))
   
 if (message.content.startsWith(prefix +"richembed")){
     const embed = new Discord.RichEmbed()
-    .setTitle("Este es su título, puede contener 256 caracteres")
+    .setTitle("Official DS TEAM Discord Server")
     .setAuthor(message.author.username, message.author.avatarURL)
     .setColor(0x00AE86)
-    .setDescription("Este es el cuerpo principal del texto, puede contener 2048 caracteres.")
-    .setFooter("Pie de página, puede contener 2048 caracteres", client.user.avatarURL)
-    .setImage(message.author.avatarURL)
-    .setThumbnail(message.author.avatarURL)
+    .setDescription("Discord Oficial de DS TEAM.")
+    .setFooter("Enviado por Ronin!", client.user.avatarURL)
+    .setImage(message.url.avatarURL)
+    .setThumbnail(message.url.avatarURL)
     .setTimestamp()
-    .setURL("https://github.com/CraterMaik")
+    .setURL("https://discord.gg/9k8eDWw")
     .addField("Este es un título de campo, puede contener 256 caracteres",
-      "Este es un valor de campo, puede contener 2048 caracteres.", true)
-    .addField("Campo en línea", "Debajo del campo en línea", true)
+      "Este es un valor de campo, puede contener 2048 caracteres.", false)
+    .addField("Campo en línea", "Debajo del campo en línea", false)
     .addBlankField(true)
-    .addField("Campo en línea 3", "Puede tener un máximo de 25 campos.", true);
+    .addField("Campo en línea 3", "Puede tener un máximo de 25 campos.", false);
 
     message.channel.send(embed)
 }
