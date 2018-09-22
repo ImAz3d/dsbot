@@ -13,7 +13,7 @@ if(message.content.startsWith("Ronin!")) {
 if(message.content.startsWith(prefix+"dimealgo"))
       message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") 
   
-if (message.content.startsWith(prefix +"sobreds")){
+if (message.content.startsWith(prefix+"sobreds")){
     const embed = new Discord.RichEmbed()
     .setTitle("Official DS TEAM Discord Server")
     .setAuthor(message.author.username, message.author.avatarURL)
