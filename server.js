@@ -10,7 +10,7 @@ client.on("ready", () => {
 if(message.content.startsWith("Ronin!")) {
      message.channel.send("Que pasa? si necesitas algo de mi, envia algun comando plox");
 }
-if(message.content.startsWith(prefix+"dimealgo"))
+if(message.content.startsWith(prefix+"sobreds"))
       message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") 
   
 if (message.content.startsWith(prefix +"dimemas")){
