@@ -21,7 +21,7 @@ if (message.content.startsWith(prefix +"sobreds")){
     .setDescription("Discord Oficial de DS TEAM.")
     .setFooter("Enviado por Ronin!", client.user.avatarURL)
     .setImage(message.author.avatarURL)
-    .setURLThumbnail("https://cdn.discordapp.com/attachments/448872120710070287/490783433857957895/GIF.gif")
+    .setURLThumbnail(message.author.avatarURL)
     .setTimestamp()
     .setURL("https://discord.gg/9k8eDWw")
     .addField("Sobre el soporte y el servidor oficial",
