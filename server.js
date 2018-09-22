@@ -3,15 +3,7 @@ const client = new Discord.Client();
 const datos = require("./datos.json")
 let prefix = datos.prefix
 client.on("ready", () => {  
-    console.log("Encendido!");
-client.user.setPresence( {
-       status: "online",
-       game: { usa "r." y escribe un comando para que yo pueda ser de tu ayuda  
-           name: `-help | Estoy en ${client.guilds.size} servidores, genial no?.`,
-           type: "PLAYING"
-       }
-    });
-    
+    console.log("Encendido!");   
 });
  
  client.on("message", (message) => {
