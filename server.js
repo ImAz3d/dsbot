@@ -10,10 +10,10 @@ client.on("ready", () => {
 if(message.content.startsWith("Ronin!")) {
      message.channel.send("Que pasa? si necesitas algo de mi, envia algun comando plox");
 }
-if(message.content.startsWith(prefix+"sobreds"))
+if(message.content.startsWith(prefix+"dimealgo"))
       message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") 
   
-if (message.content.startsWith(prefix +"dimemas")){
+if (message.content.startsWith(prefix +"sobreds")){
     const embed = new Discord.RichEmbed()
     .setTitle("Official DS TEAM Discord Server")
     .setAuthor(message.author.username, message.author.avatarURL)
@@ -25,7 +25,7 @@ if (message.content.startsWith(prefix +"dimemas")){
     .setTimestamp()
     .setURL("https://discord.gg/9k8eDWw")
     .addField("Sobre el soporte y el servidor oficial",
-      "Entra a DS TEAM para soporte de Ronin! o ser parte de la comunidad.", false)
+      "Entra a DS TEAM para soporte de Ronin! o ser parte de la comunidad, en caso de alguna duda o error sobre Ronin! consulta a los Guardianes de DS o Al Creador.", false)
     .addBlankField(true);
 
     message.channel.send(embed)
