@@ -91,7 +91,7 @@ dispatcher.resume();
 
 dispatcher.end();
 
-}
+
  if (command === 'ytplay') {
     const ytdl = require('ytdl-core');
 
