@@ -19,6 +19,10 @@ if(message.content.startsWith("Ronin!")) {
 }
 if(message.content.startsWith(prefix+"dimealgo"))
       message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") 
+
+if(message.content.startsWith(prefix+"help"))
+   message.channel.send("Aún no hay comandos fijos :P Lo siento")
+
   
 if (message.content.startsWith(prefix+"sobreds")){
     const embed = new Discord.RichEmbed()
@@ -43,4 +47,3 @@ if (message.content.startsWith(prefix+"sobreds")){
  client.on("error", (e) => console.error(e));
  client.on("warn", (e) => console.warn(e));
  client.on("debug", (e) => console.info(e));
-
