@@ -8,7 +8,6 @@ client.on("ready", () => {
        status: "online",
        game: {
            name: `r.help | Estoy en ${client.guilds.size} servidores.`,
-           name: `r.help | GanzoAstral Es un gordo :v.`,
            type: "PLAYING"
        }
     });  
@@ -40,3 +39,82 @@ if (message.content.startsWith(prefix+"sobreds")){
 }
 });
  client.login(datos.token);
+
+ client.on("error", (e) => console.error(e));
+ client.on("warn", (e) => console.warn(e));
+ client.on("debug", (e) => console.info(e));
+
+if (command === 'join') { 
+    let Canalvoz = message.member.voiceChannel;
+    if (!Canalvoz || Canalvoz.type !== 'voice') {
+    message.channel.send('¡Necesitas unirte a un canal de voz primero!.').catch(error => message.channel.send(error));
+    } else if (message.guild.voiceConnection) {
+    message.channel.send('Ya estoy conectado en un canal de voz.');
+    } else {
+     message.channel.send('Conectando...').then(m => {
+          Canalvoz.join().then(() => {
+               m.edit(':white_check_mark: | Conectado exitosamente.').catch(error => message.channel.send(error));
+         }).catch(error => message.channel.send(error));
+     }).catch(error => message.channel.send(error));
+    }
+}
+if (command === 'leave') { 
+    let Canalvoz = message.member.voiceChannel;
+    if (!Canalvoz) {
+        message.channel.send('No estoy en un canal de voz.');
+    } else {
+        message.channel.send('Dejando el canal de voz.').then(() => {
+        Canalvoz.leave();
+        }).catch(error => message.channel.send(error));
+    }   
+}
+if (commmand === 'play') {
+    if (!message.guild.voiceConnection) return message.channel.send('¡No estoy en un canal de voz!, use `-join` para unirme a un canal.').catch(error => message.channel.send(error));
+    const dispatcher = message.guild.voiceConnection.playFile(`C:/Users/Desktop/musica/audio.mp3`);
+}
+dispatcher.on('end', () => {
+  // Se activa cuando la transmisión/canción ha terminado.
+});
+
+dispatcher.on('error', e => {
+  // Se activa cuando detecta cualquier error que pueda surgir.
+  console.log(e);
+});
+
+dispatcher.setVolume(0.5); // Ajuste el volumen a 50%
+dispatcher.setVolume(1); // Ajuste el volumen de nuevo al 100%
+
+dispatcher.time; // El tiempo en milisegundos durante la secuencias que ha estado en transmisión.
+
+dispatcher.pause(); // Detener la secuencia transmisión
+dispatcher.resume(); // Continuar la secuencia transmisión
+
+dispatcher.end(); // Finaliza el dispatcher, emite evento 'end'
+
+}
+ if (command === 'ytplay') {
+    const ytdl = require('ytdl-core');
+
+    let voiceChannel = message.member.voiceChannel;
+    if(!voiceChannel) return message.channel.send('¡Necesitas unirte a un canal de voz primero!.');
+    if(!args) return message.channel.send('Ingrese un enlace de youtube para poder reproducirlo.');
+    voiceChannel.join()
+      .then(connection => {
+        const url = ytdl(args, { filter : 'audioonly' });
+        const dispatcher = connection.playStream(url);
+        message.channel.send('Reproduciendo ahora: '+ args);
+        message.delete();
+      })
+      .catch(console.error);
+}
+ if (command === 'radio') {
+    let voiceChannel = message.member.voiceChannel;
+    if(!voiceChannel) return message.channel.send('¡Necesitas unirte a un canal de voz primero!.');
+        voiceChannel.join().then(conexion =>{
+        conexion.playStream('http://stream.electroradio.fm:80/192k/;');
+        message.channel.send('Radio electro activado.')
+        return;
+      })
+      .catch(console.error);
+}
+conexion.playArbitraryInput('http://miweb.com/sonido.mp3');
