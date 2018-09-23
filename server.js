@@ -73,23 +73,23 @@ if (commmand === 'play') {
     const dispatcher = message.guild.voiceConnection.playFile(`C:/Users/Desktop/musica/audio.mp3`);
 }
 dispatcher.on('end', () => {
-  // Se activa cuando la transmisión/canción ha terminado.
+   
 });
 
 dispatcher.on('error', e => {
-  // Se activa cuando detecta cualquier error que pueda surgir.
+   
   console.log(e);
 });
 
-dispatcher.setVolume(0.5); // Ajuste el volumen a 50%
-dispatcher.setVolume(1); // Ajuste el volumen de nuevo al 100%
+dispatcher.setVolume(0.5);
+dispatcher.setVolume(1);
 
-dispatcher.time; // El tiempo en milisegundos durante la secuencias que ha estado en transmisión.
+dispatcher.time;
 
-dispatcher.pause(); // Detener la secuencia transmisión
-dispatcher.resume(); // Continuar la secuencia transmisión
+dispatcher.pause();
+dispatcher.resume();
 
-dispatcher.end(); // Finaliza el dispatcher, emite evento 'end'
+dispatcher.end();
 
 }
  if (command === 'ytplay') {
