@@ -7,7 +7,8 @@ client.on("ready", () => {
    client.user.setPresence( {
        status: "online",
        game: {
-           name: `-help | Estoy en ${client.guilds.size} servidores.`,
+           name: `r.help | Estoy en ${client.guilds.size} servidores.`,
+           name: `r.help | GanzoAstral Es un gordo :v.`,
            type: "PLAYING"
        }
     });  
