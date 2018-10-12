@@ -43,7 +43,7 @@ if (message.content.startsWith(prefix+"sobreds")){
 }
 });
  client.login(datos.token);
- client.login(process.env.TOKEN);
+ client.login(process.env.BOT_TOKEN);
 
  client.on("error", (e) => console.error(e));
  client.on("warn", (e) => console.warn(e));
