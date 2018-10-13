@@ -34,6 +34,7 @@ if(command === "addrole") {
         message.channel.send("El usuario "+user+" acaba de recibir el rol "+role.name")
     }).catch(error => {
         console.log(error)
+           
  });
  client.login(datos.token);
  client.login(process.env.BOT_TOKEN);
