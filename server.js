@@ -31,8 +31,12 @@ if(command === "addrole") {
     var role = message.mentions.roles.first() || message.guild.roles.find("name",args.slice(1).join(" "))
     if(!role) return message.channel.send(`el rol ${args.slice(1).join(" ")} no existe.`)
     user.addRole(role.id).then(m => {
-        message.channel.send("El usuario "+user+" acaba de recibir el rol "+role.name")
- });
+        message.channel.send("El usuario "+user+" acaba de recibir el rol "+role.name)
+          }).catch(error => {
+            console.log(error)
+        });
+    }
+});
  client.login(process.env.BOT_TOKEN);
 
  client.on("error", (e) => console.error(e));
