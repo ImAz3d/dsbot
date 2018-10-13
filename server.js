@@ -12,12 +12,13 @@ client.on("ready", () => {
        }
     });  
 });
- const args = message.content.slice(prefix.length).trim().split(/ +/g);
+ client.on("message", (message) => {
+ 
+  const args = message.content.slice(prefix.length).trim().split(/ +/g);
 
   const command = args.shift().toLowerCase();
-
- client.on("message", (message) => {
-if(message.content.startsWith(prefix+"ronin!")) {
+ 
+  if(message.content.startsWith(prefix+"ronin!")) {
      message.channel.send("Que pasa? si necesitas algo de mi, envia algun comando plox");
 }
 if(message.content.startsWith(prefix+"dimealgo"))
