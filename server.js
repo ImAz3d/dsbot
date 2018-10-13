@@ -35,7 +35,7 @@ if(command === "addrole") {
     }).catch(error => {
         console.log(error) 
     });       
- });
+ }
  client.login(process.env.BOT_TOKEN);
 
  client.on("error", (e) => console.error(e));
