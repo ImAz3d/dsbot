@@ -36,9 +36,9 @@ if (message.content.startsWith(prefix+"sobreronin")){
     .setTimestamp()
     .setURL("https://discordapp.com/api/oauth2/authorize?client_id=492970132654784523&permissions=8&scope=bot")
     .addField("Como funciona?", "Si quieres ver los comandos del bot simplemente escribe r.help.")
-    .addField("Si quieres entrar al servidor de soporte aquí la invitacion!", "https://discord.gg/Q5F5ZBu", false)
+    .addField("Entra al servidor de soporte!", "https://discord.gg/Q5F5ZBu", true)
     .addBlankField(false)
-    .addField("Bot", "Hecho en DM COMMUNITY Y CREADO POR AZ3D.", true);
+    .addField("Bot", "Hecho en DM COMMUNITY.", false);
     message.channel.send(embed)
 }
 });
