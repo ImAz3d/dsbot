@@ -32,10 +32,6 @@ if(command === "addrole") {
     if(!role) return message.channel.send(`el rol ${args.slice(1).join(" ")} no existe.`)
     user.addRole(role.id).then(m => {
         message.channel.send("El usuario "+user+" acaba de recibir el rol "+role.name")
-        }).catch(error => {
-            console.log(error)
-        });
-    }
  });
  client.login(process.env.BOT_TOKEN);
 
