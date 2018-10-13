@@ -26,7 +26,7 @@ if(message.content.startsWith(prefix+"help"))
   
 if (message.content.startsWith(prefix+"sobreronin")){
     const embed = new Discord.RichEmbed()
-     .setTitle("Click aquí para invitar el bot a tu servidor!")
+     .setTitle("Click aquí para entrar al servidor de soporte!")
     .setAuthor(message.author.username, message.author.avatarURL)
     .setColor(0x00AE86)
     .setDescription("asda.", false);
@@ -34,11 +34,11 @@ if (message.content.startsWith(prefix+"sobreronin")){
     .setImage(message.author.avatarURL)
     .setThumbnail(message.author.avatarURL)
     .setTimestamp()
-    .setURL("https://discordapp.com/api/oauth2/authorize?client_id=492970132654784523&permissions=8&scope=bot")
+    .setURL("https://discord.gg/Q5F5ZBu")
     .addField("Como funciona?", "Si quieres ver los comandos del bot simplemente escribe r.help.")
-    .addField("Entra al servidor de soporte!", "https://discord.gg/Q5F5ZBu", true)
+    .addField("asda", "asda", false)
     .addBlankField(false)
-    .addField("Bot", "Hecho en DM COMMUNITY.", false);
+    .addField("asda", "asda.", false);
     message.channel.send(embed)
 }
 });
