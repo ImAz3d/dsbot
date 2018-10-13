@@ -24,6 +24,7 @@ if(message.content.startsWith(prefix+"help"))
    message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin! Sentimos la escasez de comandos, pero dentro de poco abran mas!")
 
 if(command === "addrole") {
+if(message.content.startsWith(prefix+"addrole")
     if(!args[0]) return message.channel.send("Necesitas colocar al @usuario/ID y el @rol/nombre")
     var user = message.mentions.members.first() || message.guild.members.get(args[0])
     if(!user) return message.channel.send(`el usuario ${args[0]} no existe`)
