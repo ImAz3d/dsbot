@@ -26,19 +26,19 @@ if(message.content.startsWith(prefix+"help"))
   
 if (message.content.startsWith(prefix+"sobreronin")){
     const embed = new Discord.RichEmbed()
-     .setTitle("Somos una comunidad gamer y tambien el Click aquí para invitar el bot a tu servidor!")
+     .setTitle("Click aquí para invitar el bot a tu servidor!")
     .setAuthor(message.author.username, message.author.avatarURL)
     .setColor(0x00AE86)
-    .setDescription("asda.")
+    .setDescription("asda.", false);
     .setFooter("Bot by Az3d", client.user.avatarURL)
     .setImage(message.author.avatarURL)
     .setThumbnail(message.author.avatarURL)
     .setTimestamp()
     .setURL("https://discordapp.com/api/oauth2/authorize?client_id=492970132654784523&permissions=8&scope=bot")
     .addField("Como funciona?", "Si quieres ver los comandos del bot simplemente escribe r.help.")
-    .addField("Bot creado por Az3d", "Si quieres entrar al servidor de soporte", false)
+    .addField("Si quieres entrar al servidor de soporte aquí la invitacion!", "https://discord.gg/Q5F5ZBu", false)
     .addBlankField(false)
-    .addField("Campo en línea 3", "Puede tener un máximo de 25 campos.", false);
+    .addField("Bot", "Hecho en DM COMMUNITY Y CREADO POR AZ3D.", true);
     message.channel.send(embed)
 }
 });
