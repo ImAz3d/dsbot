@@ -25,7 +25,7 @@ if(message.content.startsWith(prefix+"dimealgo"))
       message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") 
 
 if(message.content.startsWith(prefix+"help"))
-   message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin! Sentimos la escasez de comandos, pero dentro de poco abran mas!")
+   message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin!, r.addrole. Sentimos la escasez de comandos, pero dentro de poco abran mas!")
 
 if(command === "addrole") {    
     if(!args[0]) return message.channel.send("Necesitas colocar al @usuario/ID y el @rol/nombre")
