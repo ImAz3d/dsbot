@@ -14,7 +14,7 @@ client.on("ready", () => {
 });
  
  client.on("message", (message) => {
-if(message.content.startsWith("Ronin!")) {
+if(message.content.startsWith(prefix+"ronin!")) {
      message.channel.send("Que pasa? si necesitas algo de mi, envia algun comando plox");
 }
 if(message.content.startsWith(prefix+"dimealgo"))
@@ -24,21 +24,21 @@ if(message.content.startsWith(prefix+"help"))
    message.channel.send("Aún no hay comandos fijos :P Lo siento")
 
   
-if (message.content.startsWith(prefix+"sobreds")){
+if (message.content.startsWith(prefix+"sobreronin")){
     const embed = new Discord.RichEmbed()
-     .setTitle("Este es su título, puede contener 256 caracteres")
+     .setTitle("Somos una comunidad gamer y tambien el Click aquí para invitar el bot a tu servidor!")
     .setAuthor(message.author.username, message.author.avatarURL)
     .setColor(0x00AE86)
-    .setDescription("Este es el cuerpo principal del texto, puede contener 2048 caracteres.")
-    .setFooter("Pie de página, puede contener 2048 caracteres", client.user.avatarURL)
+    .setDescription("asda.")
+    .setFooter("Bot by Az3d", client.user.avatarURL)
     .setImage(message.author.avatarURL)
     .setThumbnail(message.author.avatarURL)
     .setTimestamp()
-    .setURL("https://github.com/CraterMaik")
-    .addField("Este es un título de campo", "Este es un valor de campo puede contener 2048 caracteres.")
-    .addField("Campo en línea", "Debajo del campo en línea", true)
-    .addBlankField(true)
-    .addField("Campo en línea 3", "Puede tener un máximo de 25 campos.", true);
+    .setURL("https://discordapp.com/api/oauth2/authorize?client_id=492970132654784523&permissions=8&scope=bot")
+    .addField("Como funciona?", "Si quieres ver los comandos del bot simplemente escribe r.help.")
+    .addField("Bot creado por Az3d", "Si quieres entrar al servidor de soporte", false)
+    .addBlankField(false)
+    .addField("Campo en línea 3", "Puede tener un máximo de 25 campos.", false);
     message.channel.send(embed)
 }
 });
