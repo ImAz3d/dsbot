@@ -36,8 +36,8 @@ if(command === "addrole") {
             console.log(error)
         });
     }
-});
-client.login(process.env.BOT_TOKEN);
+ });
+ client.login(process.env.BOT_TOKEN);
 
  client.on("error", (e) => console.error(e));
  client.on("warn", (e) => console.warn(e));
