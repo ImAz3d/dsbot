@@ -21,21 +21,7 @@ if(message.content.startsWith(prefix+"dimealgo"))
       message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") 
 
 if(message.content.startsWith(prefix+"help"))
-   message.channel.send("Aún no hay comandos fijos :P Lo siento")
-
-  
-if (message.content.startsWith(prefix+"sobreronin")){
-    const embed = new Discord.RichEmbed()
-     .setTitle("Click aquí para entrar al servidor de soporte!")
-    .setAuthor(message.author.username, message.author.avatarURL)
-    .setColor(0x00AE86)
-    .setDescription("Este bot sigue en fase de pruebas.", true);
-    .setFooter("Bot by Az3d", client.user.avatarURL)
-    .setTimestamp()
-    .setURL("https://discord.gg/Q5F5ZBu")
-    .addField("Como funciona?", "Si quieres ver los comandos del bot simplemente escribe r.help.")
-    message.channel.send(embed)
-}
+   message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin! Sentimos la escasez de comandos, pero dentro de poco abran mas!")
 });
  client.login(datos.token);
  client.login(process.env.BOT_TOKEN);
