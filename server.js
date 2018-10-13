@@ -8,7 +8,7 @@ client.on("ready", () => {
        status: "online",
        game: {
            name: `r.help | Estoy en ${client.guilds.size} servidores.`,
-           type: "PLAYING"
+           type: "STREAMING"
        }
     });  
 });
