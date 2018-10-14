@@ -26,6 +26,7 @@ if(message.content.startsWith(prefix+"dimealgo"))
 
 if(message.content.startsWith(prefix+"help"))
    message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin!, r.addrole (Este comando todavia esta en pruebas). Sentimos la escasez de comandos, pero dentro de poco abran mas!")
+
 if(message.content.startsWith(prefix+"invitebot"))
    const embed = new Discord.RichEmbed() 
    embed=discord.Embed(title="Click aqui para agregar al bot a tu servidor", url="https://discordapp.com/api/oauth2/authorize?client_id=492970132654784523&permissions=8&scope=bot", color=0x80ff80)
