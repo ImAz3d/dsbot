@@ -22,16 +22,16 @@ client.on("ready", () => {
      message.channel.send("Que pasa? si necesitas algo de mi, envia algun comando plox");
 }
 if(message.content.startsWith(prefix+"dimealgo"))
-      message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3")          
+      message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") }        
 
 if(message.content.startsWith(prefix+"help")){
    message.channel.send("**"+message.author.username+"**, Revisa tus mensajes privados.");
    message.author.send("**COMANDOS**\n```\n"+
-                        '-> "+prefix+"ronin :Usalo si estas aburrido.\n"+
-                        '-> "+prefix+"dimealgo          :Te dira algo que te sorprendera.\n"+
-                        '-> "+prefix+"addrole @user rol :Añade un rol a alguien.\n"+
-                        '-> "+prefix+"removerole @user rol :Remueve el rol a quien se lo merezca.\n"+
-                        '**DM BOT By Az3d - Unete al servidor de soporte! :**\nhttps://discord.gg/Q5F5ZBu");
+                       "-> "+prefix+"ronin :Usalo si estas aburrido.\n"+
+                       "-> "+prefix+"dimealgo          :Te dira algo que te sorprendera.\n"+
+                       "-> "+prefix+"addrole @user rol :Añade un rol a alguien.\n"+
+                       "-> "+prefix+"removerole @user rol :Remueve el rol a quien se lo merezca.\n"+
+                       "**DM BOT By Az3d - Unete al servidor de soporte! :**\nhttps://discord.gg/Q5F5ZBu");
     
   }
       
