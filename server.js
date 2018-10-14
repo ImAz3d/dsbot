@@ -18,7 +18,7 @@ client.on("ready", () => {
 
   const command = args.shift().toLowerCase();
  
-  if(message.content.startsWith(prefix+"ronin!")) {
+if(message.content.startsWith(prefix+"ronin!")) {
      message.channel.send("Que pasa? si necesitas algo de mi, envia algun comando plox");
      
 if(message.content.startsWith(prefix+"dimealgo"))
@@ -67,10 +67,34 @@ if(command === "addrole"){
      
     if(message.mentions.users.size < 1) return message.reply('Debes mencionar a alguien para darle el rol.').catch(console.error);
     if(!nombrerol) return message.channel.send('Te falta especificar el rol, no soy adivino, `-addrol @name rol`');
-    if(!role) return message.channel.send('Rol no encontrado en el servidor.');
-    
+    if(!role) return message.channel.send('Rol no encontrado en el servidor.'); 
     miembro.addRole(role).catch(console.error);
     message.channel.send(`**${miembro.user.username}** ahora tiene el rol **${role.name}**.`);
+   
+   if (message.content.startsWith(prefix +"invitebot")){
+    message.channel.send({embed: {
+      color: 3447003,
+      author: {
+          name: client.user.username,
+          icon_url: client.user.avatarURL
+      },
+      title: "Click aquí para invitar a Ronin a tu servidor!",
+      url: "http://ow.ly/IBSD30mdSw6",
+      description: "Asi que quieres invitar a Ronin a tu servidor eh?.",
+      fields: [{
+          name: "Entra al servidor de soporte!",
+          value: "[Click aquí para entrar](https://discord.gg/Q5F5ZBu)."
+        }
+      ],
+      timestamp: new Date(),
+      footer: {
+        icon_url: client.user.avatarURL,
+        text: github.com/CraterMaik"
+      }
+    }
+});
+}
+     
    
   }
     
