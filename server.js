@@ -28,7 +28,7 @@ if(message.content.startsWith(prefix+"help"))
    message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin!, r.addrole (Este comando todavia esta en pruebas). Sentimos la escasez de comandos, pero dentro de poco abran mas!")
 
 if(message.content.startsWith(prefix+"invitebot"))
-   const embed = {
+   message.channel.send({embed: {
   "title": "Click aquí para agregar el bot a tu servidor!",
   "description": "Te gusto el bot? Ayuda al creador uniendote al servidor de soporte! Aquí la invitacion: https://discord.gg/Q5F5ZBu",
   "url": "http://ow.ly/IBSD30mdSw6",
