@@ -22,7 +22,7 @@ client.on("ready", () => {
      message.channel.send("Que pasa? si necesitas algo de mi, envia algun comando plox");
 }
 if(message.content.startsWith(prefix+"dimealgo"))
-      message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") }        
+      message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3")        
 
 if(message.content.startsWith(prefix+"help")){
    message.channel.send("**"+message.author.username+"**, Revisa tus mensajes privados.");
