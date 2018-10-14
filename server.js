@@ -7,7 +7,7 @@ client.on("ready", () => {
    client.user.setPresence( {
        status: "online",
        game: {
-           name: `r.help | Estoy en ${client.guilds.size} servidores.`,
+           name: `r.help | En mantenimiento hasta el martes 16/10`,
            type: "PLAYING"
        }
     });  
