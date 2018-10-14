@@ -21,30 +21,6 @@ client.on("ready", () => {
   if(message.content.startsWith(prefix+"ronin!")) {
      message.channel.send("Que pasa? si necesitas algo de mi, envia algun comando plox");
      
-  if (message.content.startsWith(prefix +"invitebot")){
-    message.channel.send({embed: {
-      color: 3447003,
-      author: {
-          name: client.user.username,
-          icon_url: client.user.avatarURL
-      },
-      title: "Click aquí para invitar a Ronin a tu servidor!",
-      url: "http://ow.ly/IBSD30mdSw6",
-      description: "Asi que quieres invitar a Ronin a tu servidor eh?.",
-      fields: [{
-          name: "Entra al servidor de soporte!",
-          value: "[Click aquí para entrar](https://discord.gg/Q5F5ZBu)."
-        }
-      ],
-      timestamp: new Date(),
-      footer: {
-        icon_url: client.user.avatarURL,
-        text: github.com/CraterMaik"
-      }
-    }
-});
-}
-     
 if(message.content.startsWith(prefix+"dimealgo"))
       message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3")        
 
