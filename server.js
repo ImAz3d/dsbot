@@ -31,7 +31,8 @@ if(message.content.startsWith(prefix+"invitebot"))
    embed=discord.Embed(title="Click aqui para agregar al bot a tu servidor", url="https://discordapp.com/api/oauth2/authorize?client_id=492970132654784523&permissions=8&scope=bot", color=0x80ff80)
    .set_thumbnail(url="https://cdn.discordapp.com/attachments/448872120710070287/490783433857957895/GIF.gif")
    .set_footer(text="Ronin (DM Bot) by ! A̖̱̖̳̤͜z̭̣̯͕̻3̣̪͉͕̫͞d̲̪͝#6086")
-   await self.bot.say(embed=embed)
+
+    message.channel.send({embed});
 
 if(command === "removerole"){
 
