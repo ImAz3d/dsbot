@@ -44,7 +44,8 @@ client.on("ready", () => {
     }
 });
 }
-if(message.content.startsWith(prefix+"dimealgo")
+     
+if(message.content.startsWith(prefix+"dimealgo"))
       message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3")        
 
 if(message.content.startsWith(prefix+"help")){
