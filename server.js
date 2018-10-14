@@ -55,21 +55,18 @@ if(command === "removerole"){
   }
 
 
-if(command === "addrole"){
-
-    let miembro = message.mentions.members.first();
-    let nombrerol = args.slice(1).join(' ');
-
-    let role = message.guild.roles.find("name", nombrerol);
-    let perms = message.member.hasPermission("MANAGE_ROLES_OR_PERMISSIONS");
-
-    if(!perms) return message.channel.send("`Lo siento` `|` Solo admins pueden usar este comando.");
-     
-    if(message.mentions.users.size < 1) return message.reply('Debes mencionar a alguien para darle el rol.').catch(console.error);
-    if(!nombrerol) return message.channel.send('Te falta especificar el rol, no soy adivino, `-addrol @name rol`');
-    if(!role) return message.channel.send('Rol no encontrado en el servidor.'); 
-    miembro.addRole(role).catch(console.error);
-    message.channel.send(`**${miembro.user.username}** ahora tiene el rol **${role.name}**.`);
+if(command === "addrole") {    
+    if(!args[0]) return message.channel.send("Necesitas colocar al @usuario/ID y el @rol/nombre")
+    var user = message.mentions.members.first() || message.guild.members.get(args[0])
+    if(!user) return message.channel.send(`el usuario ${args[0]} no existe`)
+    if(!args[1]) return message.channel.send("Necesitas colocar el @rol/nombre")
+    var role = message.mentions.roles.first() || message.guild.roles.find("name",args.slice(1).join(" "))
+    if(!role) return message.channel.send(`el rol ${args.slice(1).join(" ")} no existe.`)
+    user.addRole(role.id).then(m => {
+        message.channel.send("El usuario "+user+" acaba de recibir el rol "+role.name)
+          }).catch(error => {
+            console.log(error)
+        });
     }
 });
  client.on("error", (e) => console.error(e));
