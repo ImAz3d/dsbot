@@ -22,26 +22,18 @@ client.on("ready", () => {
      message.channel.send("Que pasa? si necesitas algo de mi, envia algun comando plox");
 }
 if(message.content.startsWith(prefix+"dimealgo"))
-      message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") 
+      message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") }          
 
-if(message.content.startsWith(prefix+"help"))
-   message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin!, r.addrole (Este comando todavia esta en pruebas). Sentimos la escasez de comandos, pero dentro de poco abran mas!")
-
-if(message.content.startsWith(prefix+"invitebot")){
-   message.channel.send({embed: {
-  "title": "Click aquí para agregar el bot a tu servidor!",
-  "description": "Te gusto el bot? Ayuda al creador uniendote al servidor de soporte! Aquí la invitacion: https://discord.gg/Q5F5ZBu",
-  "url": "http://ow.ly/IBSD30mdSw6",
-  "color": 2769010,
-  "footer": {
-    "icon_url": "http://ow.ly/siyK30mdSFD",
-    "text": "Ronin (DM Bot) by Az3d"
-  },
-  "thumbnail": {
-    "url": "http://ow.ly/hrvU30mdSGm"
-   }
-}     
-channel.send({ embed });
+if(message.content.startsWith(prefix+"help")){
+   message.channel.send("**"+message.author.username+"**, Revisa tus mensajes privados.");
+   message.author.send("**COMANDOS**\n```\n"+
+                        '-> "+prefix+"ronin :Usalo si estas aburrido.\n"+
+                        '-> "+prefix+"dimealgo          :Te dira algo que te sorprendera.\n"+
+                        '-> "+prefix+"addrole @user rol :Añade un rol a alguien.\n"+
+                        '-> "+prefix+"removerole @user rol :Remueve el rol a quien se lo merezca.\n"+
+                        '**DM BOT By Az3d - Unete al servidor de soporte! :**\nhttps://discord.gg/Q5F5ZBu");
+    
+  }
       
 if(command === "removerole"){
 
