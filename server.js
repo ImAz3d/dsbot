@@ -90,7 +90,6 @@ if(command === "addrole"){
       footer: {
         icon_url: client.user.avatarURL,
         text: github.com/CraterMaik"
-      }
     }
 });
 } 
