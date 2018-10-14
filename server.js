@@ -39,8 +39,9 @@ if(message.content.startsWith(prefix+"invitebot"))
   },
   "thumbnail": {
     "url": "http://ow.ly/hrvU30mdSGm"
-  }
-};
+   }
+});
+}     
 channel.send({ embed });
       
 if(command === "removerole"){
