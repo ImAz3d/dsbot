@@ -70,7 +70,6 @@ if(command === "addrole"){
     if(!role) return message.channel.send('Rol no encontrado en el servidor.'); 
     miembro.addRole(role).catch(console.error);
     message.channel.send(`**${miembro.user.username}** ahora tiene el rol **${role.name}**.`);
-
        });
     }
 });
