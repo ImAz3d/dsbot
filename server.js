@@ -28,7 +28,8 @@ if(message.content.startsWith(prefix+"help"))
    message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin!, r.addrole. Sentimos la escasez de comandos, pero dentro de poco abran mas!")
 
 if(command === "addrole") {
-    if(!message.member.roles.some(r=>["Administrador"].includes(r.name)))
+    if(!message.member.roles.some(r=>["♛Creador de DM♛"].includes(r.name)))
+    if(!message.member.roles.some(r=>["✪Guardian de DM✪"].includes(r.name)))
     return message.channel.send("No tienes los permisos necesarios")
     if(!args[0]) return message.channel.send("Necesitas colocar al @usuario/ID y el @rol/nombre")
     var user = message.mentions.members.first() || message.guild.members.get(args[0])
