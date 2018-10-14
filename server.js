@@ -28,7 +28,20 @@ if(message.content.startsWith(prefix+"help"))
    message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin!, r.addrole (Este comando todavia esta en pruebas). Sentimos la escasez de comandos, pero dentro de poco abran mas!")
 
 if(message.content.startsWith(prefix+"invitebot"))
-   message.channel.send("http://ow.ly/IBSD30mdSw6")
+   const embed = {
+  "title": "Click aquí para agregar el bot a tu servidor!",
+  "description": "Te gusto el bot? Ayuda al creador uniendote al servidor de soporte! Aquí la invitacion: https://discord.gg/Q5F5ZBu",
+  "url": "http://ow.ly/IBSD30mdSw6",
+  "color": 2769010,
+  "footer": {
+    "icon_url": "http://ow.ly/siyK30mdSFD",
+    "text": "Ronin (DM Bot) by Az3d"
+  },
+  "thumbnail": {
+    "url": "http://ow.ly/hrvU30mdSGm"
+  }
+};
+channel.send({ embed });
       
 if(command === "removerole"){
 
