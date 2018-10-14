@@ -27,7 +27,9 @@ if(message.content.startsWith(prefix+"dimealgo"))
 if(message.content.startsWith(prefix+"help"))
    message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin!, r.addrole. Sentimos la escasez de comandos, pero dentro de poco abran mas!")
 
-if(command === "addrole") {    
+if(command === "addrole") {
+   var verificar = message.guild.roles.find(rol => rol.name === "Integrante de dm")
+if(!message.member.roles.has(verificar.id)) return message.channel.send("No tienes los permisos necesarios.")
     if(!args[0]) return message.channel.send("Necesitas colocar al @usuario/ID y el @rol/nombre")
     var user = message.mentions.members.first() || message.guild.members.get(args[0])
     if(!user) return message.channel.send(`el usuario ${args[0]} no existe`)
