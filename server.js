@@ -25,7 +25,9 @@ if(message.content.startsWith(prefix+"dimealgo"))
       message.channel.send("Algo :v, si GanzoAstral viera esto estaria muy indigna3") 
 
 if(message.content.startsWith(prefix+"help"))
-   message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin!, r.addrole. Sentimos la escasez de comandos, pero dentro de poco abran mas!")
+   message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin!, r.addrole (Este comando todavia esta en pruebas). Sentimos la escasez de comandos, pero dentro de poco abran mas!")
+if(message.content.startsWith(prefix+"invitebot"))
+   message.channel.send("https://discordapp.com/api/oauth2/authorize?client_id=492970132654784523&permissions=8&scope=bot"))
 
 if(command === "addrole") {
     if(!message.member.roles.some(r=>["♛Creador de DM♛"].includes(r.name)))
