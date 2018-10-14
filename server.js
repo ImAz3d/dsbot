@@ -28,7 +28,6 @@ if(message.content.startsWith(prefix+"help"))
    message.channel.send("Los comandos disponibles ahora mismo son: r.dimealgo, r.ronin!, r.addrole (Este comando todavia esta en pruebas). Sentimos la escasez de comandos, pero dentro de poco abran mas!")
 
 if(message.content.startsWith(prefix+"invitebot"))
-   const embed = new Discord.RichEmbed() 
    embed=discord.Embed(title="Click aqui para agregar al bot a tu servidor", url="https://discordapp.com/api/oauth2/authorize?client_id=492970132654784523&permissions=8&scope=bot", color=0x80ff80)
    embed.set_author(name="Asi que quieres agregar a Ronin a tu servidor eh?",, icon_url="https://cdn.discordapp.com/attachments/448872120710070287/498716786334760970/Evil_Style_Avatar.png")
    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/448872120710070287/490783433857957895/GIF.gif")
