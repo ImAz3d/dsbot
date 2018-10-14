@@ -71,28 +71,6 @@ if(command === "addrole"){
     miembro.addRole(role).catch(console.error);
     message.channel.send(`**${miembro.user.username}** ahora tiene el rol **${role.name}**.`);
    
-   if (message.content.startsWith(prefix +"invitebot")){
-    message.channel.send({embed: {
-      color: 3447003,
-      author: {
-          name: client.user.username,
-          icon_url: client.user.avatarURL
-      },
-      title: "Click aquí para invitar a Ronin a tu servidor!",
-      url: "http://ow.ly/IBSD30mdSw6",
-      description: "Asi que quieres invitar a Ronin a tu servidor eh?.",
-      fields: [{
-          name: "Entra al servidor de soporte!",
-          value: "[Click aquí para entrar](https://discord.gg/Q5F5ZBu)."
-        }
-      ],
-      timestamp: new Date(),
-      footer: {
-        icon_url: client.user.avatarURL,
-        text: github.com/CraterMaik"
-
-      }
-       
 });
  client.on("error", (e) => console.error(e));
  client.on("warn", (e) => console.warn(e));
