@@ -92,7 +92,6 @@ if(command === "addrole"){
         text: github.com/CraterMaik"
        }
     }
-});
 }
 });
  client.on("error", (e) => console.error(e));
